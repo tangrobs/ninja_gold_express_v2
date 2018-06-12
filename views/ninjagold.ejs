@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+    <div class = "wrapper">
+        <p><%= name %>'s gold stash: <%= gold %> <a href="/save" >save</a></p>
+        <div class = "property">
+            <h1>Farm</h1>
+            <p>(earns 10-20 golds)</p>
+            <form action = "/process_money" method="POST" >
+                <input type="hidden" name = "area" value ="farm">
+                <input type="submit" value ="Find Gold!">
+            </form>
+        </div>
+        <div class = "property">
+            <h1>Cave</h1>
+            <p>(earns 5-10 golds)</p>
+            <form action = "/process_money" method="POST">
+                <input type="hidden" name = "area" value ="cave">
+                <input type="submit" value ="Find Gold!">
+            </form>
+        </div>
+        <div class = "property">
+            <h1>House</h1>
+            <p>(earns 2-5 golds)</p>
+            <form action = "/process_money" method="POST"> 
+                <input type="hidden" name = "area" value ="house">
+                <input type="submit" value ="Find Gold!">
+            </form>
+        </div>
+        <div class = "property">
+            <h1>Casino</h1>
+            <p>(earns 0-50 golds)</p>
+            <form action = "/process_money" method="POST">
+                <input type="hidden" name = "area" value ="casino">
+                <input type="submit" value ="Find Gold!">
+            </form>
+        </div>
+        <h5>Activities:</h5>
+        <div id = "activitiesbox">
+            <% for(var i = activities.length - 1; i >=0 ; i--) {%> 
+                <p id = "<%= activities[i][0] %>"><%= activities[i][1] %></p>    
+            <% } %>
+        </div>
+    </div>
+    
+</body>
+</html>

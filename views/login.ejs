@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div class = "login">
+
+        <h3>Login to ninja gold!</h3>
+        <% if(messages.login) { %> 
+            <% for (var x of messages.login) { %> 
+                <p class = "error"><%= x %></p>
+            <% } %>
+        <% } %>
+        <form action = "/login" method = "post">
+            <p>
+                Name: <input type = "text" name = "name"> 
+                <input type = "submit" value = "submit">
+            </p>
+        </form>
+    </div>
+</body>
+</html>

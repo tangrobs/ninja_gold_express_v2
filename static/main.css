@@ -1,0 +1,38 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.wrapper{
+    width:900px;
+    border:2px solid black;
+    padding:5px
+}
+.property{
+    width:200px;
+    height:200px;
+    display:inline-block;
+    border:2px solid black;
+    text-align:center;
+}
+#activitiesbox{
+    height:300px;
+    border:2px solid black;
+    overflow:scroll;
+}
+#won{
+    color:blue;
+}
+#lost{
+    color:red;
+}
+.error{
+    color:red;
+}
+.login, .scoreboard{
+   width:400px;
+   margin:auto;
+   margin-top:200px;
+}
+.login h3, .scoreboard h3{
+    margin-bottom:20px;
+}
